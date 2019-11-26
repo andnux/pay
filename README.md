@@ -10,7 +10,7 @@ allprojects {
 - **Step 2.** Add the dependency
 ```groovy
 dependencies {
-    def  version = "0.0.1"
+    def  version = "0.0.2"
     implementation "com.github.andnux:pay:${version}"
     or
     implementation "com.github.andnux:pay:alipay:${version}" 
