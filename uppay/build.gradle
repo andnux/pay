@@ -1,7 +1,8 @@
 apply plugin: 'com.android.library'
 group='com.github.andnux'
+
 android {
-    namespace 'top.andnux.pay.core'
+    namespace 'top.andnux.pay.uppay'
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
@@ -25,9 +26,10 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api 'androidx.appcompat:appcompat:1.1.0'
+    api project(path: ':core')
+    api files('libs/UPPayAssistEx.jar')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

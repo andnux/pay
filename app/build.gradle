@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace 'top.andnux.pay'
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+
     defaultConfig {
         applicationId "top.andnux.pay"
         minSdkVersion 21
@@ -11,6 +12,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -29,4 +31,5 @@ dependencies {
     api project(path: ':core')
     api project(path: ':wxpay')
     api project(path: ':alipay')
+    api project(path: ':uppay')
 }
